@@ -133,7 +133,8 @@ var goToOrigin = _.once(function(lat, lng) {
   map.flyTo([lat, lng], 14);
 });
 
-
+var data = $.ajax('https://api.mapbox.com/directions/v5/mapbox/driving/-73.989%2C40.733%3B-74%2C40.733.json?access_token=pk.eyJ1IjoiZWNlcm5lYSIsImEiOiJjamZlNXlrcjUwNDZkMzNsOWdxNmRlMGJiIn0.f-2PsavaVXM0TrxmB8HUSg');
+var polyline = decode('_urwFt}qbMuLp_@jWzPoHhRMK');
 /* Given a lat and a long, we should create a marker, store it
  *  somewhere, and add it to the map
  */
@@ -169,8 +170,10 @@ $(document).ready(function() {
 
   // click handler for the "calculate" button (probably you want to do something with this)
   $("#calculate").click(function(e) {
+    var route = L.polyline(polyline, {color: 'red'}).addTo(map);
     var dest = $('#dest').val();
     console.log(dest);
+    map.flyTo([40.733,-73.989],15);
   });
 
 });
