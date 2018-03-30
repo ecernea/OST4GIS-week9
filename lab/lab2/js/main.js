@@ -50,7 +50,8 @@ Task 1: Use Mapbox's 'Search' API to 'geocode' information from your input
 The docs: https://www.mapbox.com/api-documentation/#geocoding
 (For this first task, the URL pattern you'll want to produce looks like this:
 `https://api.mapbox.com/geocoding/v5/mapbox.places/{geocode_this}.json?access_token={your_mapbox_token}`)
-
+//Evan Notes: replace geocode_this with "University of Pennsylvania" or something
+//Evan Notes: you have to get an account on MapBox and get an access token at the end of your url
 You might note that this task is slightly underspecified: there are multiple different
 ways to transform text into an address. For the lab, the simplest form of geocoding
 (i.e. without any further options being specified) is entirely appropriate. More complex
@@ -173,5 +174,3 @@ $(document).ready(function() {
   });
 
 });
-
-
